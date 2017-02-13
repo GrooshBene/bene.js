@@ -12,3 +12,10 @@ function connectDB(url){
         }
     })
 }
+
+function initSchema(name, schema){
+    var dbSchema = mongoose.Schema;
+    var temp_schema = new dbSchema(schema);
+
+    return mongoose.model(name, temp_schema);
+}
