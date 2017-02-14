@@ -49,3 +49,12 @@ function dbUpdate(schema, searchQuery, updateQuery, callback){
         return callback(result);
     })
 }
+
+function dbSearchAll(schema, callback){
+    schema.find({}, function (err, result) {
+        if(err){
+            return callback(err);
+        }
+        return callback(result);
+    })
+}
