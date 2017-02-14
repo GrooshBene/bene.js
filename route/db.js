@@ -41,6 +41,11 @@ function dbSearch(schema, searchQuery, callback){
     })
 }
 
-function dbUpdate(schema, searchQuery, callback){
-    schema.
+function dbUpdate(schema, searchQuery, updateQuery, callback){
+    schema.findOneAndUpdate(searchQuery, updateQuery, function (err, result) {
+        if(err){
+            return callback(err);
+        }
+        return callback(result);
+    })
 }
