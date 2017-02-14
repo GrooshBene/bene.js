@@ -19,3 +19,28 @@ function initSchema(name, schema){
 
     return mongoose.model(name, temp_schema);
 }
+
+function dbPush(schema, callback){
+    schema.save(function (err) {
+        if(err){
+            console.log("Data Push Failed");
+            throw err;
+        }
+        else{
+            console.log("Data Added : " + schema);
+        }
+    })
+}
+
+function dbSearch(schema, searchQuery, callback){
+    schema.find(searchQuery, function (err, result) {
+        if(err){
+            return callback(err);
+        }
+        return callback(result);
+    })
+}
+
+function dbUpdate(schema, searchQuery, callback){
+    schema.
+}
