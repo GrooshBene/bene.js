@@ -58,3 +58,11 @@ function dbSearchAll(schema, callback){
         return callback(result);
     })
 }
+
+
+exports.connectDB = connectDB;
+exports.initSchema = initSchema;
+exports.dbPush = dbPush;
+exports.dbSearch = dbSearch;
+exports.dbSearchAll = dbSearchAll;
+exports.dbUpdate = dbUpdate;
