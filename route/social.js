@@ -17,14 +17,18 @@ function initialize(){
     });
 }
 
-// function setStrategy(social, clientID, clientSecret){
-//     switch(social){
-//         case 'facebook' :
-//             passport.use(new FacebookTokenStrategy({
-//                 clientID : clientID,
-//                 clientSecret : clientSecret,
-//             }, function (accessToken, refreshToken, profile, done) {
-//
-//             }))
-//     }
-// }
+function fbTokeninit(clientID, clientSecret, callback){
+    passport.use(new FacebookTokenStrategy({
+        clientID: clientID,
+        clientSecret : clientSecret
+    }, function (accessToken, refreshToken, profile, done) {
+        callback(profile);
+    }))
+}
+
+
+
+
+
+exports.initialize = initialize;
+exports.fbTokeninit = fbTokeninit;
