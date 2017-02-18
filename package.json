@@ -1,0 +1,21 @@
+{
+  "name" : "bene.js",
+  "version" : "0.0.1",
+  "description" : "Node.js Coding Booster",
+  "private" : true,
+  "keywords" : [
+    "bene.js",
+    "js",
+    "node.js",
+    "node",
+    "social",
+    "data"
+  ],
+  "dependencies" : {
+    "express" : "*",
+    "mongoose" : "*",
+    "randomString" : "*",
+    "passport" : "*",
+    "passport-facebook-token" : "*"
+  }
+}
