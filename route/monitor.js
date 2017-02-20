@@ -4,10 +4,10 @@
 var pcap = require('pcap');
 var moment = require('moment');
 
-var args = require('./lib/args.js');
-var CONST = require('./lib/constants.js');
-var ui = require('./lib/ui.js');
-var log = require('./lib/log.js');
+var args = require('./args.js');
+var CONST = require('./constants.js');
+var ui = require('./ui.js');
+var log = require('./log.js');
 
 var start = function () {
     var pcap_session = pcap.createSession(args.params.interface, args.params.filter);
