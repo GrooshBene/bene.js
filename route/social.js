@@ -17,18 +17,14 @@ function initialize(){
     });
 }
 
-function fbTokeninit(clientID, clientSecret, callback){
+function fbTokeninit(clientID, clientSecret, callback) {
     passport.use(new FacebookTokenStrategy({
         clientID: clientID,
-        clientSecret : clientSecret
+        clientSecret: clientSecret
     }, function (accessToken, refreshToken, profile, done) {
         callback(profile);
     }))
 }
-
-
-
-
 
 exports.initialize = initialize;
 exports.fbTokeninit = fbTokeninit;
