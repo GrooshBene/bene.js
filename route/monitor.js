@@ -1,7 +1,7 @@
 /**
  * Created by GrooshBene on 2017-02-20.
  */
-var pcap = require('pcap2');
+// var pcap = require('pcap2');
 var moment = require('moment');
 
 //var args = require('./args.js');
