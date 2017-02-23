@@ -3,7 +3,7 @@
  */
 var blessed = require('blessed');
 
-var CONST = requre('./constants.js');
+var CONST = require('./constants.js');
 
 var packet_logs = [];
 var packet_headers = [];
@@ -98,7 +98,7 @@ screen.key(['escape', 'q', 'C-c'], function (ch, key) {
 screen.render();
 
 logs.on('mouseover', function () {
-    log.focus();
+    logs.focus();
 });
 
 details.on('mouseover', function () {
