@@ -17,4 +17,21 @@
 // });
 // //===================================================
 
-require('./route/monitor').start();
+// require('./route/monitor').start();
+var pcap = require('pcap2'),
+    tcpTracker = new pcap.TCPTracker(),
+    pcapSession = new pcap.Session('en0', {
+        filter: 'ip proto \\tcp'
+    });
+
+tcpTracker.on('session', function (session) {
+    console.log('Start of session between ' + session.src_name + ' and ' + session.dst_name);
+    session.on('end', function (session) {
+        console.log('End of TCP session between ' + session.src_name + ' and ' + session.dst_name);
+    });
+});
+
+pcapSession.on('packet', function (rawPacket) {
+    var packet = pcap.decode.packet(rawPacket);
+    tcpTracker.track_packet(packet);
+});
