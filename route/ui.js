@@ -142,7 +142,7 @@ function showDisplay(content, caller) {
 }
 
 var displayLog = function (log, headers, timestamp) {
-    var log = '#' + padLeft(id, 4, 0) + ' : [' + timestamp.format('DD/MMM/YYYY:HH:mm:ss ZZ') + '] ' + padRight(headers.Host, 30, ' ') + ' ' + log;
+    var log = '#' + padLeft(id, 4, 0) + ' : [' + /*timestamp.format('DD/MMM/YYYY:HH:mm:ss ZZ') + */'] ' + padRight(headers.Host, 30, ' ') + ' ' + log;
     id++;
 
     packet_logs.push(log);
