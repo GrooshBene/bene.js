@@ -15,7 +15,7 @@
 // social.fbTokeninit("1132996196786425", "6d689678c191d56a3f8dfcae932a9fac", function (result) {
 //     console.log(result);
 // });
-// //===================================================
+// require('./route/monitor').start();
 
-require('./route/monitor').start();
+
 
