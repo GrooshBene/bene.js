@@ -19,6 +19,11 @@ function initSchema(name, schema){
 
     return mongoose.model(name, temp_schema);
 }
+function initSocial(callback){
+  var social_init = response;
+  social.initialize();
+  social.fbTokeninit
+}
 
 function dbPush(schema, callback){
     schema.save(function (err) {
